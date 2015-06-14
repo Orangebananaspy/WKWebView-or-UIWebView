@@ -12,11 +12,11 @@
   {
     WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
     theConfiguration.preferences.javaScriptEnabled = YES;
-    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 30, self.modalRegisterCompanyView.frame.size.width, self.modalRegisterCompanyView.frame.size.height) configuration:theConfiguration];
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:theConfiguration];
   }
   else
   {
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 30, self.modalRegisterCompanyView.frame.size.width, self.modalRegisterCompanyView.frame.size.height)];
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
   }
   
   self.webView.backgroundColor = [UIColor clearColor];
